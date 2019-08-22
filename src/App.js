@@ -4,6 +4,7 @@ import 'materialize-css/dist/css/materialize.min.css';
 import Todo from './Todo';
 import AddTodo from './AddTodo';
 import './app.css'
+import * as $ from 'jquery';
 import M from 'materialize-css';
 
 
@@ -24,6 +25,16 @@ class App extends Component {
       const elems = document.querySelectorAll('.autocomplete');
       M.Autocomplete.init(elems, options);
     });
+    // Or with jQuery
+    // $(document).ready(function(){
+    //   $('input.autocomplete').autocomplete({
+    //     data: {
+    //       "Apple": null,
+    //       "Microsoft": null,
+    //       "Google": 'https://placehold.it/250x250'
+    //     },
+    //   });
+    // });
   }
   
   deleteTodo = (id) => {
